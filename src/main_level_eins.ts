@@ -1,7 +1,7 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
-import mysql from 'mysql';
+import * from 'mysql';
 
 // Verbindung zur Datenbank herstellen
 const connection = createConnection({
