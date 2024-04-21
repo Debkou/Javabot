@@ -51,7 +51,7 @@ WA.onInit().then(async () => {
 // starte den Dialog beim Eintritt der Karte
 
     noteWebsite = await WA.ui.website.open({
-        url: "dialog_note_test.html",
+        url: "https://github.com/Debkou/Javabot/blob/master/dialog_note_test.html",
         position: {
             vertical: "top",
             horizontal: "middle",
