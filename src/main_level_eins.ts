@@ -14,7 +14,7 @@ const connection = mysql.createConnection({
 });
 
 // Verbindung zur Datenbank herstellen
-connection.connect((any err) => {
+connection.connect((err) => {
     if (err) {
         console.error('Fehler beim Verbinden zur Datenbank: ', err);
         return;
@@ -23,7 +23,7 @@ connection.connect((any err) => {
 });
 
 // Beispielabfrage
-connection.query('SELECT * FROM users', (any error, any results) => {
+connection.query('SELECT * FROM users', (error, results) => {
     if (error) {
         console.error('Fehler bei der Abfrage: ', error);
         return;
