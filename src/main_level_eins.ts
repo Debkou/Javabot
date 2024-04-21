@@ -1,7 +1,7 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
-const mysql = require('mysql');
+import mysql from 'mysql';
 
 console.log('Script started successfully');
 
