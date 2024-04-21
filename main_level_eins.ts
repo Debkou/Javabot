@@ -24,7 +24,7 @@ connection.connect((err) => {
     console.log('Erfolgreich zur Datenbank verbunden');
 });
 
-connection.query('SELECT * FROM aufgaben', (error, results, fields) => {
+connection.query('SELECT * FROM aufgaben', (error, results) => {
     if (error) {
         console.error('Fehler bei der Abfrage: ', error);
         return;
