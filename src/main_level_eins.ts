@@ -14,7 +14,7 @@ const connection = mysql.createConnection({
 });
 
 // Verbindung zur Datenbank herstellen
-connection.connect((err) => {
+connection.connect((err: Error | null) => {
     if (err) {
         console.error('Fehler beim Verbinden zur Datenbank: ', err);
         return;
@@ -23,7 +23,7 @@ connection.connect((err) => {
 });
 
 // Beispielabfrage
-connection.query('SELECT * FROM users', (error, results) => {
+connection.query('SELECT * FROM users', (error: mysql.MysqlError | null, results: any[]) => {
     if (error) {
         console.error('Fehler bei der Abfrage: ', error);
         return;
@@ -97,6 +97,4 @@ WA.onInit().then(async () => {
         noteWebsite.close();
     });
 
-}).catch(e => console.error(e));
-
-export {};
+}).catch(e =>
