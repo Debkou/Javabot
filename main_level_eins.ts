@@ -47,7 +47,7 @@ WA.onInit().then(async () => {
 // starte den Dialog beim Eintritt der Karte
 
     noteWebsite = await WA.ui.website.open({
-        url: "src/dialog_note_test.html",
+        url: "http://javabotchi.kunst-werk-hagen.de/index.html",
         position: {
             vertical: "top",
             horizontal: "middle",
