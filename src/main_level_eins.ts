@@ -97,4 +97,4 @@ WA.onInit().then(async () => {
         noteWebsite.close();
     });
 
-}).catch(e =>)
+}).catch(e => console.error(e));
