@@ -1,6 +1,32 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
+import { createConnection } from 'mysql';
+
+// Verbindung zur Datenbank herstellen
+const connection = createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'password',
+    database: 'meineDatenbank'
+});
+
+connection.connect((err) => {
+    if (err) {
+        console.error('Fehler beim Verbinden zur Datenbank: ' + err.stack);
+        return;
+    }
+    console.log('Erfolgreich mit der Datenbank verbunden als ID ' + connection.threadId);
+});
+
+// Datenbankabfrage ausführen
+connection.query('SELECT * FROM meineTabelle', (error, results) => {
+    if (error) {
+        console.error('Fehler bei der Abfrage: ' + error.message);
+        return;
+    }
+    console.log('Ergebnis der Abfrage:', results);
+});
 
 
 console.log('Script started successfully');
