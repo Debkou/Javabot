@@ -440,7 +440,7 @@
         {
          "columns":16,
          "firstgid":1,
-         "image":"..\/OneDrive\/Dokumente\/GitHub\/testworld\/tilesets\/rpg_maker_vx__modernrtp_tilea4_by_painhurt_d3f7s8m.png",
+         "image":"tilesets\/rpg_maker_vx__modernrtp_tilea4_by_painhurt_d3f7s8m.png",
          "imageheight":480,
          "imagewidth":512,
          "margin":0,
@@ -453,7 +453,7 @@
         {
          "columns":16,
          "firstgid":241,
-         "image":"..\/OneDrive\/Dokumente\/GitHub\/testworld\/tilesets\/sewer_walls_floor_by_nicnubill_d712apa.png",
+         "image":"tilesets\/sewer_walls_floor_by_nicnubill_d712apa.png",
          "imageheight":512,
          "imagewidth":512,
          "margin":0,
@@ -466,7 +466,7 @@
         {
          "columns":12,
          "firstgid":497,
-         "image":"..\/OneDrive\/Dokumente\/GitHub\/testworld\/tilesets\/_secretpassages_by_nicnubill_d7xmg03.png",
+         "image":"tilesets\/_secretpassages_by_nicnubill_d7xmg03.png",
          "imageheight":512,
          "imagewidth":384,
          "margin":0,
@@ -479,7 +479,7 @@
         {
          "columns":13,
          "firstgid":689,
-         "image":"..\/OneDrive\/Dokumente\/GitHub\/testworld\/tilesets\/WA_User_Interface.png",
+         "image":"tilesets\/WA_User_Interface.png",
          "imageheight":672,
          "imagewidth":416,
          "margin":0,
@@ -492,7 +492,7 @@
         {
          "columns":6,
          "firstgid":962,
-         "image":"..\/OneDrive\/Dokumente\/GitHub\/testworld\/tilesets\/WA_Special_Zones.png",
+         "image":"tilesets\/WA_Special_Zones.png",
          "imageheight":64,
          "imagewidth":192,
          "margin":0,
