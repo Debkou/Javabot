@@ -27,7 +27,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 index: "./index.html",
-                  note: "./dialog_note_test.html",
+                  note: "http://javabotchi.kunst-werk-hagen.de/index.html",
                 ...getMapsScripts(maps),
             },
         },
