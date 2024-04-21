@@ -5,7 +5,7 @@ import { getMaps, getMapsOptimizers, getMapsScripts, LogLevel, OptimizeOptions }
 const maps = getMaps();
 
 let optimizerOptions: OptimizeOptions = {
-logs: process.env.LOG_LEVEL && process.env.LOG_LEVEL in LogLevel ? LogLevel[process.env.LOG_LEVEL] : LogLevel.NORMAL,
+    logs: process.env.LOG_LEVEL && process.env.LOG_LEVEL in LogLevel ? LogLevel[process.env.LOG_LEVEL] : LogLevel.NORMAL,
 };
 
 if (process.env.TILESET_OPTIMIZATION && process.env.TILESET_OPTIMIZATION === "true") {
@@ -27,10 +27,9 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 index: "./index.html",
-                note: "./dialog_note_test.html",
+                  note: "./dialog_note_test.html",
                 ...getMapsScripts(maps),
             },
-            external: ['mysql'] // Hier fügen Sie das hinzu
         },
     },
     plugins: [...getMapsOptimizers(maps, optimizerOptions)],
