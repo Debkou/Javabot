@@ -47,7 +47,7 @@ WA.onInit().then(async () => {
 // starte den Dialog beim Eintritt der Karte
 
     noteWebsite = await WA.ui.website.open({
-        url: "src/dialog_note_test.html",
+        url: "dialog_note_test.html",
         position: {
             vertical: "top",
             horizontal: "middle",
