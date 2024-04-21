@@ -27,6 +27,8 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 index: "./index.html",
+                  note: "./note.html",
+                  noteDialog: "./dialog_note.html",
                 ...getMapsScripts(maps),
             },
         },
