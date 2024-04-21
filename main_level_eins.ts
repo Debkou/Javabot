@@ -5,6 +5,35 @@ const mysql = require('mysql');
 
 console.log('Script started successfully');
 
+// Verbindung zur Datenbank herstellen
+const connection = mysql.createConnection({
+    host: 'w0188670.kasserver.com',
+    user: 'd04009b1',
+    password: 'javapw',
+    database: 'd04009b1'
+});
+
+// Verbindung zur Datenbank herstellen
+connection.connect((err) => {
+    if (err) {
+        console.error('Fehler beim Verbinden zur Datenbank: ', err);
+        return;
+    }
+    console.log('Erfolgreich zur Datenbank verbunden');
+});
+
+// Beispielabfrage
+connection.query('SELECT * FROM users', (error, results, fields) => {
+    if (error) {
+        console.error('Fehler bei der Abfrage: ', error);
+        return;
+    }
+    console.log('Ergebnisse der Abfrage: ', results);
+});
+
+// Verbindung zur Datenbank trennen, wenn Sie fertig sind
+connection.end();
+
 
 /**
  * Utility function to display the correct door image depending on the state of the door.
