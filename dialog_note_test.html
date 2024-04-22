@@ -4,13 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Level 1</title>
+	<script src="https://play.workadventu.re/iframe_api.js"></script>
+        
     <style>
-        /* CSS-Stile hier einfügen */
+		body {
+            overflow: hidden;
+        }
+        #textContainer {
+            width: 600px;
+            margin: 50px auto;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+			background-color: white;
+        }
+
+        .arrow {
+            cursor: pointer;
+            margin: 0 10px;
+			color: #FFFFFF;
+        }
+
+        #noteTextArea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
     </style>
+  <script type="module" crossorigin src="./assets/note-94e06ba9.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/init-d40afb2b.js">
 </head>
 <body>
     <div id="textContainer">
-         <p id="text1">Woka: "Die Semesterparty gestern ging ganz schön lang..."</p>
+        <p id="text1">Woka: "Die Semesterparty gestern ging ganz schön lang..."</p>
 		<p id="text2">Woka: "Wie bin ich eigentlich nach Hause gekommen? - <br>Vielleicht war das letzte bier doch keine gute Idee"</p>
         <p id="text3" style="display: none;">Woka: "Ganz schön dunkel hier.."</p>
         <p id="text4" style="display: none;">Woka: "hmm.. komisch. Eigentlich müsste der Lichtschalter hier sein. Alles anders hier!"</p>
@@ -59,17 +85,6 @@
                 showText(currentIndex);
             }
 
-            function fetchTextFromDatabase() {
-                const xmlhttp = new XMLHttpRequest();
-                xmlhttp.onreadystatechange = function() {
-                    if (this.readyState === 4 && this.status === 200) {
-                        document.getElementById("text1").innerHTML = this.responseText;
-                    }
-                };
-                xmlhttp.open("GET", "src/abfrage.php", true);
-                xmlhttp.send();
-            }
-
             function setupArrowClickHandlers() {
                 const leftArrow = document.getElementById('leftArrow');
                 const rightArrow = document.getElementById('rightArrow');
@@ -80,7 +95,6 @@
 
             setupArrowClickHandlers();
             showText(currentIndex);
-            fetchTextFromDatabase();
         });
     </script>
 </body>
