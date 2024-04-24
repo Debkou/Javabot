@@ -34,3 +34,18 @@ function closePopup(){
 }
 
 export {};
+
+async function fetchData() {
+    try {
+        const response = await fetch('https://dummy.restapiexample.com/api/v1/employees');
+        if (!response.ok) {
+            throw new Error('Failed to fetch data');
+        }
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+fetchData();
